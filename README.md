@@ -20,6 +20,8 @@ https://github.com/yardenfren1996/B-LoRA
 
  - https://github.com/huggingface/diffusers/blob/main/scripts/convert_diffusers_sdxl_lora_to_webui.py
 
+ - https://github.com/yardenfren1996/B-LoRA/issues/7
+
  - https://github.com/comfyanonymous/ComfyUI/issues/3674
 
 ## Citation

@@ -1,4 +1,4 @@
-# ComfyUI-B-LoRA (Working in Progress)
+# ComfyUI-B-LoRA
 
 A ComfyUI custom node that loads and applies B-LoRA models.
 

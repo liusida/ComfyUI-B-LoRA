@@ -2,6 +2,7 @@ import torch
 import folder_paths
 import comfy.utils
 import comfy.sd
+import comfy.model_base
 
 class LoadBLoRA:
     BLOCKS = {
@@ -73,6 +74,8 @@ class LoadBLoRA:
         return filtered_lora
 
     def main(self, model, lora_name, load_style, load_content, strength):
+        if not isinstance(model.model, comfy.model_base.SDXL):
+            raise Exception("Currently, B-LoRA only supports `Stable Diffusion XL` as its base model.")
         if strength == 0:
             return (model,)
         if not load_style and not load_content:
@@ -95,7 +98,7 @@ class LoadBLoRA:
         lora = self.filter_lora(lora, load_style, load_content)
 
         if len(lora)==0:
-            raise Exception("not a B-Lora model")
+            raise Exception("The LoRA model you choose is not a B-Lora model.")
 
         if not list(lora.keys())[0].startswith('lora_'): # It's not in kohya format (that ComfyUI uses), might be in diffusers format.
             try:
@@ -108,9 +111,8 @@ class LoadBLoRA:
 
                 lora = convert_to_kohya(lora)
             except ImportError as e:
-                print("Please upgrade your `diffusers`. For now, fall back to manually conversion.")
+                print("Please install the latest `diffusers` to include the `convert_state_dict_to_kohya()` function. For now, fall back to a quick and dirty conversion (it works) that I wrote.")
                 lora = self.convert_to_kohya(lora)
-
 
         model_lora, _ = comfy.sd.load_lora_for_models(model, None, lora, strength, strength_clip=0)
         return (model_lora, )

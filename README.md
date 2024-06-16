@@ -14,6 +14,18 @@ https://github.com/yardenfren1996/B-LoRA
 
 3. Only need one image to train.
 
+## Workflow Examples
+
+### A Single Load B-LoRA node
+
+![workflow](workflows/load_b_lora.png)
+🌟 `<s>` is the training prompt for one B-Lora `colorful-squirrel`
+
+### A B-LoRA for Style, and another for Content
+
+![workflow](workflows/style_plus_content.png)
+🌟 `<s>` is the training prompt for one B-Lora `colorful-squirrel`, and `<p>` is the training prompt for the other `pencil-boy`.
+
 ## Credit goes to:
 
  - https://github.com/yardenfren1996/B-LoRA

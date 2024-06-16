@@ -94,21 +94,23 @@ class LoadBLoRA:
 
         lora = self.filter_lora(lora, load_style, load_content)
 
-        try:
-            from diffusers.utils import convert_all_state_dict_to_peft, convert_state_dict_to_kohya
-
-            def convert_to_kohya(diffusers_state_dict):
-                peft_state_dict = convert_all_state_dict_to_peft(diffusers_state_dict)
-                kohya_state_dict = convert_state_dict_to_kohya(peft_state_dict)
-                return kohya_state_dict
-
-            lora = convert_to_kohya(lora)
-        except ImportError as e:
-            print("Please upgrade your `diffusers`. For now, fall back to manually conversion.")
-            lora = self.convert_to_kohya(lora)
-
         if len(lora)==0:
             raise Exception("not a B-Lora model")
+
+        if not list(lora.keys())[0].startswith('lora_'): # It's not in kohya format (that ComfyUI uses), might be in diffusers format.
+            try:
+                from diffusers.utils import convert_all_state_dict_to_peft, convert_state_dict_to_kohya
+
+                def convert_to_kohya(diffusers_state_dict):
+                    peft_state_dict = convert_all_state_dict_to_peft(diffusers_state_dict)
+                    kohya_state_dict = convert_state_dict_to_kohya(peft_state_dict)
+                    return kohya_state_dict
+
+                lora = convert_to_kohya(lora)
+            except ImportError as e:
+                print("Please upgrade your `diffusers`. For now, fall back to manually conversion.")
+                lora = self.convert_to_kohya(lora)
+
 
         model_lora, _ = comfy.sd.load_lora_for_models(model, None, lora, strength, strength_clip=0)
         return (model_lora, )

@@ -26,6 +26,10 @@ https://github.com/yardenfren1996/B-LoRA
 ![workflow](workflows/style_plus_content.png)
 🌟 `<s>` is the training prompt for one B-Lora `colorful-squirrel`, and `<p>` is the training prompt for the other `pencil-boy`.
 
+### B-LoRA models used in the workflows can be downloaded here:
+
+https://huggingface.co/sida/B-LoRA-examples/tree/main
+
 ## Credit goes to:
 
  - https://github.com/yardenfren1996/B-LoRA
@@ -38,7 +42,7 @@ https://github.com/yardenfren1996/B-LoRA
 
 ## Citation
 
-If you use B-LoRA in your research, please cite the following paper:
+If you use B-LoRA in your research, please cite the authors' paper:
 
 ```
 @misc{frenkel2024implicit,

@@ -1,18 +1,28 @@
 # ComfyUI-B-LoRA (Working in Progress)
-Load and apply B-LoRA models, currently B-LoRA models only works with SDXL (`sdxl_base_1.0`).
+
+A ComfyUI custom node that loads and applies B-LoRA models.
 
 ![Figure](https://b-lora.github.io/B-LoRA/static/figures/teaser_style_content_blora.png)
 
-## B-LoRA
-https://github.com/yardenfren1996/B-LoRA
+## What is B-LoRA?
+
+B-LoRA: By implicitly decomposing a single image into its style and content representation captured by B-LoRA, we can perform high quality style-content mixing and even swapping the style and content between two stylized images.
+
+ - 🌐 Website: https://b-lora.github.io/B-LoRA/
+
+ - Code: https://github.com/yardenfren1996/B-LoRA/
+
+ - Currently B-LoRA models only works with SDXL (`sdxl_base_1.0`).
 
 ## Advantages of B-LoRA
 
-1. Can differentiate `Style` and `Content`.
+1. Can apply `Style` or `Content`, or both.
 
-2. Much smaller model files. (~100M)
+2. Much smaller model files. (~100M for SDXL B-LoRAs)
 
-3. Only need one image to train.
+3. One B-LoRA only needs one image as training dataset and 15 minutes to train. (on a single RTX 4090)
+
+Please share your B-LoRA models on Civit.ai or HuggingFace!
 
 ## Workflow Examples
 

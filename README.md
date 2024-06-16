@@ -40,6 +40,10 @@ Please share your B-LoRA models on Civit.ai or HuggingFace!
 
 https://huggingface.co/sida/B-LoRA-examples/tree/main
 
+## Train Your B-LoRAs (WIP):
+
+I'm building a docker image for training. Please check [train](./train/README.md) to see current progress.
+
 ## Credit goes to:
 
  - https://github.com/yardenfren1996/B-LoRA

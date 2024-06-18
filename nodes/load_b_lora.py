@@ -95,6 +95,9 @@ class LoadBLoRA:
             lora = comfy.utils.load_torch_file(lora_path, safe_load=True)
             self.loaded_lora = (lora_path, lora)
 
+        # fix: B-LoRAs from author's https://huggingface.co/lora-library/ have duplicated `unet.` in the beginning of the keys. Deduplicate them.
+        lora = {key.replace('unet.unet.', 'unet.', 1): value for key, value in lora.items()}
+
         lora = self.filter_lora(lora, load_style, load_content)
 
         if len(lora)==0:

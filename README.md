@@ -40,6 +40,10 @@ Please share your B-LoRA models on Civit.ai or HuggingFace!
 
 https://huggingface.co/sida/B-LoRA-examples/tree/main
 
+## More pretrained B-LoRAs to try out:
+
+https://huggingface.co/lora-library?sort_models=downloads#models
+
 ## Train Your B-LoRAs (WIP):
 
 I'm building a docker image for training. Please check [train](./train/README.md) to see current progress.

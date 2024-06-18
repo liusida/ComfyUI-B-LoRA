@@ -32,7 +32,7 @@ Please share your B-LoRA models on Civit.ai or HuggingFace!
 
 <img src="nodes/load_b_lora.png" width="400" />
 
- - `lora_name`: Choose the B-LoRA model you want to load.
+ - `lora_name`: Choose the B-LoRA model you want to load. By default, it'll searches in the `models/loras/` folder for available models.
 
  - `load_style`: Do you want the style of that B-LoRA?
 

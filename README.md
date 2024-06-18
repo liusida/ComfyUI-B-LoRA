@@ -4,6 +4,8 @@ A ComfyUI custom node that loads and applies B-LoRA models.
 
 ![Figure](https://b-lora.github.io/B-LoRA/static/figures/teaser_style_content_blora.png)
 
+![Reproducing](workflows/reproduce_official_example.png)
+
 ## What is B-LoRA?
 
 B-LoRA: By implicitly decomposing a single image into its style and content representation captured by B-LoRA, we can perform high quality style-content mixing and even swapping the style and content between two stylized images.

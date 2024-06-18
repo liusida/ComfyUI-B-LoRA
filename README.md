@@ -14,7 +14,7 @@ B-LoRA: By implicitly decomposing a single image into its style and content repr
 
  - Code: https://github.com/yardenfren1996/B-LoRA/
 
- - Currently B-LoRA models only works with SDXL (`sdxl_base_1.0`).
+ - Currently B-LoRA models only works with SDXL (`sdxl_base_1.0`). (Compatible but not guaranteed with SDXL-based fine-tuned models.)
 
 ## Advantages of B-LoRA
 

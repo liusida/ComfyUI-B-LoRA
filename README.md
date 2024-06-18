@@ -26,6 +26,20 @@ B-LoRA: By implicitly decomposing a single image into its style and content repr
 
 Please share your B-LoRA models on Civit.ai or HuggingFace!
 
+## Node
+
+### Load B-LoRA
+
+![node](nodes/load_b_lora.png)
+
+ - `lora_name`: Choose the B-LoRA model you want to load.
+
+ - `load_style`: Do you want the style of that B-LoRA?
+
+ - `load_content`: Do you want to content of that B-LoRA?
+
+ - `strength`: How strong do you want that B-LoRA to affect the model?
+
 ## Workflow Examples
 
 ### A Single Load B-LoRA node

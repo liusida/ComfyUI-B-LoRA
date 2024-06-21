@@ -1,0 +1,14 @@
+[project]
+name = "comfyui-b-lora"
+description = "Load and apply B-LoRA models, currently B-LoRA models only works with SDXL (sdxl_base_1.0)."
+version = "1.0.0"
+license = "LICENSE"
+
+[project.urls]
+Repository = "https://github.com/liusida/ComfyUI-B-LoRA"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-B-LoRA"
+Icon = ""
